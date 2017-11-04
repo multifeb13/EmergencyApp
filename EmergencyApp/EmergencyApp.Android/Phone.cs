@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using Xamarin.Forms;
+
 [assembly: Xamarin.Forms.Dependency(typeof(EmergencyApp.Droid.Phone))]
 
 namespace EmergencyApp.Droid
@@ -24,8 +26,9 @@ namespace EmergencyApp.Droid
 
         public void Call(string name, string number)
         {
-            var intent = new Intent(Intent.ActionDial, Android.Net.Uri.Parse("tel:" + number));
-            StartActivity(intent);
+            var uri = Android.Net.Uri.Parse( "tel:" + number.Trim( ) );
+            var intent = new Intent( Intent.ActionCall, uri );
+            Forms.Context.StartActivity( intent );
         }
     }
 }

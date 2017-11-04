@@ -109,7 +109,7 @@ namespace EmergencyApp
                 if (result)
                 {
                     // 正式版           DependencyService.Get<IPhone>().Call("救急車", "119");
-                    DependencyService.Get<IPhone>().Call("天気予報", "03177");
+                    DependencyService.Get<IPhone>().Call("天気予報", "177");
                 }
             }
             catch (Exception ex)
