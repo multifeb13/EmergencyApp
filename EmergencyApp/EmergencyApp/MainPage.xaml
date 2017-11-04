@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EmergencyApp"
+             x:Class="EmergencyApp.MainPage"
+             Title="防犯アプリ">
+
+    <StackLayout>
+        <!-- 1段目 -->
+        <!--設定ボタン-->
+        <Button x:Name="SettingBtn"
+            Image="set"
+            HeightRequest="40"
+            WidthRequest="40"
+            HorizontalOptions="End"
+            Clicked="SetButton_Clicked">
+        </Button>
+
+        <!-- 2段目 -->
+        <!--OnOffボタン-->
+        <Button x:Name="OnOffBtn"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Text="PUSH"
+                TextColor="White"
+                BackgroundColor="Red"
+                BorderRadius="10"
+                HeightRequest="300"
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnOffButton_Clicked">
+        </Button>
+
+        <!-- 3段目 -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" HeightRequest="100 " Spacing="0" >
+            <!--110番ボタン-->
+            <Button x:Name="SelectPolice"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Image ="telphone"
+   				Text="110"
+                TextColor="White"
+                BackgroundColor="LightBlue"
+                HorizontalOptions="FillAndExpand"
+                Clicked="TelPolice_Clicked">
+            </Button>
+
+            <!--119番ボタン-->
+            <Button x:Name ="SelectAmb"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Image="telphone"
+   				Text="119"
+                TextColor="White"
+                BackgroundColor="LightBlue"
+                HorizontalOptions="FillAndExpand"
+                Clicked="TelAmbulance_Clicked">
+            </Button>
+
+            <!--短縮ダイヤルボタン-->
+            <Button x:Name ="SelectShort" 
+                FontSize="Large"
+                Image="telphone"
+                Text="短縮"
+                TextColor="White"
+                BackgroundColor="LightBlue"
+                HorizontalOptions="FillAndExpand"
+                Clicked="TelShort_Clicked">
+            </Button>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

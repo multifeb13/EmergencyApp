@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmergencyApp.SettingPage"
+             Title="設定画面">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView RowHeight="70">
+                <TableView.Root>
+                    <TableSection>
+                        <!-- 1段目 -->
+                        <SwitchCell Text="マナーモード解除"></SwitchCell>
+                        <!-- 2段目 -->
+                        <TextCell   x:Name="SelectVoice"
+                                    Text="声の選択" 
+                                    TextColor="Black"
+                                    Detail="未設定"
+                                    DetailColor="LightGray"
+                                    Tapped ="VoiceCell_Tapped"/>
+                        <!-- 3段目 -->
+                        <TextCell   x:Name="SelectTEL"
+                                    Text="短縮ダイヤル"
+                                    TextColor="Black"
+                                    Detail="未設定"
+                                    DetailColor="LightBlue"
+                                    Tapped ="ShortDialCell_Tapped"/>
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
