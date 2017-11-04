@@ -26,8 +26,7 @@ namespace EmergencyApp.Droid
 
         public void Call(string name, string number)
         {
-            var uri = Android.Net.Uri.Parse( "tel:" + number.Trim( ) );
-            var intent = new Intent( Intent.ActionCall, uri );
+            var intent = new Intent( Intent.ActionDial, Android.Net.Uri.Parse( "tel:" + number.Trim() ) );
             Forms.Context.StartActivity( intent );
         }
     }
